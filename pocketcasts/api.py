@@ -13,7 +13,7 @@ def require_login(function):
             if not self._logged_in:
                 raise Exception("You must be logged in to use this function")
             else:
-                function(self, *args, **kwargs)
+                return function(self, *args, **kwargs)
         return wrapper
 
 
