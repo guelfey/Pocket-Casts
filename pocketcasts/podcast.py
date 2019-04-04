@@ -5,8 +5,12 @@ class _Podcast(object):
     """Class for podcast information and methods"""
     class SortOrder(Enum):
         """Class to allow ease of reference to sort orders"""
-        NewestToOldest = 3
+        AToZ = 0
+        ZToA = 1
         OldestToNewest = 2
+        NewestToOldest = 3
+        LongToShort = 4
+        ShortToLong = 5
 
     def __init__(self, api, uuid, episodes=[], **kwargs):
         """

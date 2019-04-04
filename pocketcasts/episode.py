@@ -49,7 +49,7 @@ class _Episode(object):
         self._playing_status = kwargs.get('playingStatus')
         self._playing_status = self.PlayingStatus(self._playing_status) if self._playing_status is not None else self.PlayingStatus.Unplayed
 
-        self._played_up_to = kwargs.get('played_up_to')
+        self._played_up_to = kwargs.get('playedUpTo')
 
     def __repr__(self):
         return f"{self.__class__} at {hex(id(self))} ({self._title})"

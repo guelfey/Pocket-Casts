@@ -221,7 +221,7 @@ class Pocketcasts(object):
             List[pocketcasts.podcast.Podcast]: A list of podcasts
 
         """
-        attempt = self._post_with_auth('https://api.pocketcasts.com/user/podcast/list', {})
+        attempt = self._post_with_auth('https://api.pocketcasts.com/user/podcast/list', '{"v":1}')
         return self._create_list_podcasts(attempt.json()['podcasts'])
 
     def get_new_releases(self):
